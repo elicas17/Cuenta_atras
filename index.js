@@ -48,20 +48,28 @@ tiempoRestante=()=>{
     id = setInterval(cuenta_atras, 1000); 
 }
 cuenta_atras = () => { 
-    seg=document.getElementById("segundos");
-    if(seg>0){
-        for(let i=1; i<=seg; i--){
-            if(seg=i){
-                document.getElementById("segundos").innerHTML=segundos>1||segundos==0?segundos+'segundos':segundos+'segundo';
+    seg=parseInt(document.getElementById("segundos").innerHTML);
+    min=parseInt(document.getElementById("minutos").innerHTML);
+    hor=parseInt(document.getElementById("horas").innerHTML);
+    dia=parseInt(document.getElementById("dias").innerHTML);
 
-            }
-            // else{
-            //     segundos=60;
-            //     document.getElementById("minutos")-1;
-            // }
-        }
+    if(seg>0){
+        // for(let i=1; i<=segundos; i--){
+        //     if(i>1){
+        //         document.getElementById("segundos").innerHTML=segundos>1||segundos==0?segundos+'segundos':segundos+'segundo';
+        //     }else{
+        //         segundos=60;
+        //         document.getElementById("minutos")-1;
+        //     }
+        // }
+
+        seg--;
+    }else{
+        seg=60;
+        document.getElementById("segundos").innerHTML=seg;
 
     }
+    document.getElementById("segundos").innerHTML=seg;
     
 }
 
