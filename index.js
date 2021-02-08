@@ -66,10 +66,11 @@ cuenta_atras = () => {
         seg--;
     }else{
         seg=60;
-        document.getElementById("segundos").innerHTML=seg;
+        min--;
 
     }
     document.getElementById("segundos").innerHTML=seg;
+    document.getElementById("minutos").innerHTML=min;
     
 }
 
