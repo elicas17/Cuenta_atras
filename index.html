@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
+    <link href="index.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     
 <!-- Realizar una App que pida la fecha de un evento, compruebe que es una fecha futura y muestre la cuenta atrás del tiempo que queda en meses, días, horas, minutos y segundos -->
-    <h1>Cuneta atrás</h1>
+    
+<div class="container">
+    <h1>Cuenta atrás</h1>
     <label for="">Introduce la fecha de un evento</label>
     <input type="date" id="fecha" >
     
     <button id=empezar>Empezar</button>
     <button id="terminar">Parar</button>
-    <span id="error" style="display:block;color:red"></span>
+    <span id="error" style="display:block;color:rgb(60, 95, 68)"></span>
 
-    <label >Tiempo restante: <span id="dias"></span>, <span id="horas"></span>, <span id="minutos"></span> y <span id="segundos"></span>
+    <label >Tiempo restante: <span id="meses">0 meses</span>, <span id="dias">0 dias</span>, <span id="horas">0 horas</span>, <span id="minutos">0 minutos</span> y <span id="segundos">0 segundos</span>
     </label>
+
+    <label style="display:block;color:red" id="mensaje"></label>
+</div>
+
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
